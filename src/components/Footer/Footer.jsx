@@ -2,7 +2,7 @@
 const Footer = () => {
     return (
         <div id="footer">
-            <h1 className="py-10 bg-stone-950"></h1>
+            <h1 className="py-10 bg-stone-950 text-center text-white">This is footer</h1>
         </div>
     );
 };
