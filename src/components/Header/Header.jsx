@@ -16,6 +16,9 @@ const Header = () => {
             <Link href="/phim-bo/1" >Phim bộ</Link>
             <Link href="/hoat-hinh/1" >Hoạt hình</Link>
 
+            <Link href="/tim-kiem" >TK1</Link>
+            <Link href="/tim-kiem?name=harry" >TK2</Link>
+
         </div>
     );
 };
