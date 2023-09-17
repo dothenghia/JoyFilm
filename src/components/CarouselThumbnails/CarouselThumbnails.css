@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Slider */
+.carousel .slider-wrapper {
+    aspect-ratio: 16 / 6.8;
+    z-index: 0;
+}
+
+.carousel .slide div {
+    transform: translateY(-9%);
+}
+
+.carousel-texts {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 13%;
+    padding-top: 5%;
+    padding-left: 28px;
+    text-align: left;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0) 100%);
+}
+
+
+/* Thumbnails */
+.carousel .thumbs-wrapper {
+    width: 100%;
+    margin: 0 !important;
+    transform: translateY(-50%);
+    background: linear-gradient(0deg, rgba(26, 26, 26, 1) 50%, rgba(26, 26, 26, 0) 100%);
+    z-index: 20;
+}
+
+.thumbs.animated {
+    @apply container xl:max-w-6xl mx-auto px-6;
+    display: flex;
+    justify-content: space-between;
+    z-index: 20;
+}
+
+.carousel .thumbs-wrapper .thumb {
+    border-radius: 16px;
+    margin: 0;
+    padding: 0;
+    border-color: transparent;
+    aspect-ratio: 16 / 9;
+
+}
+
+.carousel .thumbs-wrapper .thumb.selected {
+    outline-width: 3px;
+    border-color: white;
+}
+
+.carousel .thumb:hover {
+    border-color: #666666;
+}
+
+
+@media only screen and (max-width : 767px) {
+    .carousel .thumbs-wrapper {
+        display: none;
+    }
+
+    .carousel .slider-wrapper {
+        margin-top: 54px;
+        aspect-ratio: 16 / 9;
+    }
+
+    .carousel .slide div {
+        transform: translateY(0%);
+    }
+
+    .carousel-texts {
+        bottom: -1px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+    .carousel .slider-wrapper {
+        aspect-ratio: 16 / 8;
+        z-index: 0;
+    }
+
+    .carousel .slide div {
+        transform: translateY(-5%);
+    }
+
+    .carousel-texts {
+        padding-bottom: 9%;
+        padding-top: 5%;
+        padding-left: calc((100% - 768px) / 2 + 28px);
+        padding-right: calc((100% - 768px) / 2 + 28px);
+    }
+
+    .carousel .thumbs-wrapper .thumb {
+        border-radius: 12px;
+    }
+
+}
+@media only screen and (min-width : 1024px) and (max-width : 1279px) {
+    .carousel-texts {
+        padding-left: calc((100% - 1024px) / 2 + 28px);
+        padding-right: calc((100% - 1024px) / 2 + 28px);
+    }
+}
+
+@media only screen and (min-width : 1280px) {
+    .carousel-texts {
+        padding-left: calc((100% - 1152px) / 2 + 28px);
+        padding-right: calc((100% - 1152px) / 2 + 28px);
+    }
+}

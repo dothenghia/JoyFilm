@@ -2,13 +2,17 @@
 import getHomePageMovies from "@/functions/getHomePageMovies";
 
 import MovieSlide from "@/components/MovieSlide/MovieSlide"
+import CarouselThumbnails from "@/components/CarouselThumbnails/CarouselThumbnails";
 
 export default async function Page() {
     const data = await getHomePageMovies()
 
     return (
         <div className="bg-background pb-10">
-            <h1>Home Page</h1>
+            
+            <CarouselThumbnails />
+
+
 
             <h3>Phim mới cập nhật</h3>
             {
