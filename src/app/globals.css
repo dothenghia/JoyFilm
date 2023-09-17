@@ -2,3 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    /* [Header] Navigation Link Button */
+    .header-link {
+        @apply block py-3 lg:py-4 px-4 mr-3 lg:mr-0 font-medium text-heading rounded-md
+        lg:rounded-none lg:hover:pb-2 lg:hover:border-b-[3px] lg:hover:bg-transparent lg:hover:border-primary;
+    }
+
+
+    .page-container-0topside {
+        @apply bg-background h-fit min-h-screen pb-16 pt-16;
+    }
+    /* [Page] Section Container */
+    .section-container {
+        @apply container xl:max-w-6xl mx-auto px-6 pt-5; 
+    }
+    .section-container-no-py {
+        @apply container xl:max-w-6xl mx-auto px-6; 
+    }
+    /* [Page] Section Title */
+    .section-title {
+        @apply text-heading font-semibold text-lg sm:text-xl uppercase;
+    }
+    .section-title-no-up {
+        @apply text-heading font-semibold text-lg sm:text-xl;
+    }
+    /* [Home Page] Section Title LINK */
+    .section-title-link {
+        @apply text-heading font-semibold text-lg sm:text-xl uppercase hover:text-secondary;
+    }
+
+}

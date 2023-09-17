@@ -7,7 +7,7 @@ export default async function Page() {
     const data = await getHomePageMovies()
 
     return (
-        <div>
+        <div className="bg-background pb-10">
             <h1>Home Page</h1>
 
             <h3>Phim mới cập nhật</h3>

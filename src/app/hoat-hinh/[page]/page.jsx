@@ -9,7 +9,7 @@ export default async function Page({ params }) {
     console.log(params)
 
     return (
-        <div>
+        <div className="page-container-0topside">
             <h1>Cartoon Page</h1>
 
             {data.data.map((movie, index) => (

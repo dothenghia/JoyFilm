@@ -1,3 +1,4 @@
+'use client'
 
 import searchMovies from "@/functions/searchMovies";
 
@@ -9,7 +10,7 @@ export default async function Page({ searchParams }) {
     console.log(searchParams)
 
     return (
-        <div>
+        <div className="page-container-0topside">
             <h1>Search Page</h1>
 
             {data.data.map((movie, index) => (
