@@ -13,12 +13,10 @@
     .page-container-0topside {
         @apply bg-background h-fit min-h-screen pb-16 pt-16;
     }
-
     /* [Page] Section Container */
     .section-container {
         @apply container xl:max-w-6xl mx-auto px-6 pt-5;
     }
-
     .section-container-no-py {
         @apply container xl:max-w-6xl mx-auto px-6;
     }
@@ -27,16 +25,17 @@
     .section-title {
         @apply text-heading font-semibold text-lg sm:text-xl uppercase;
     }
-
     .section-title-no-up {
         @apply text-heading font-semibold text-lg sm:text-xl;
     }
-
     /* [Home Page] Section Title LINK */
     .section-title-link {
         @apply text-heading font-semibold text-lg sm:text-xl uppercase hover:text-secondary;
     }
-
+    /* [Page] Section Divider */
+    .section-divider {
+        @apply mt-6 border-b-2 border-divider;
+    }
 
     /* Play Button & Add Button */
     .play-button-color {
