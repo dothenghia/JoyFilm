@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+
+import phd from '../../../public/placeholder.png'
 
 const MovieCard = ({ movie }) => {
 
@@ -10,12 +13,16 @@ const MovieCard = ({ movie }) => {
 
                 {/* ------ Thumbnail wrapper ------ */}
                 <div className="overflow-hidden rounded-lg lg:rounded-xl relative">
-                    <div className="aspect-[9/13.5] group-hover:blur-sm group-hover:brightness-50
+                    <div className="relative aspect-[9/13.5] group-hover:blur-sm group-hover:brightness-50
                                 scale-100 group-hover:scale-125 ease-in duration-200">
-                        <img
+                        <Image
                             src={movie.thumb_url}
                             alt={movie.name}
-                            className="aspect-[9/13.5]"
+                            fill={true}
+                            priority={true}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            quality={50}
+                            className="object-cover"
                         />
 
                     </div>

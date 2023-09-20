@@ -32,12 +32,13 @@ const Header = () => {
                                     alt="Logo"
                                     width={30}
                                     height={30}
+                                    // priority={true}
                                     className="mr-2"
-                                    quality={100}
                                 />
                                 <Image
                                     src='/joyfilm.png'
                                     alt="JoyFilm"
+                                    // priority={true}
                                     height={28}
                                     width={84}
                                 />
