@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
     title: 'JoyFilm',
-    description: 'Website xem phim trực tuyến, chất lượng cao, miễn phí và KHÔNG CHỨA QUẢNG CÁO',
+    description: 'Website xem phim trực tuyến miễn phí, chất lượng cao và không quảng cáo',
 }
 
 export default function RootLayout({ children }) {

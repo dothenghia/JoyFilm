@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import phd from '../../../public/placeholder.png'
-
 const MovieCard = ({ movie }) => {
 
     return (
@@ -20,8 +18,9 @@ const MovieCard = ({ movie }) => {
                             alt={movie.name}
                             fill={true}
                             priority={true}
+                            // loading="lazy"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            quality={50}
+                            quality={40}
                             className="object-cover"
                         />
 
