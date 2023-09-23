@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 .loader {
-    width: 35px;
+    width: 40px;
     aspect-ratio: 1;
-    --_g: no-repeat radial-gradient(farthest-side, #fff 94%, #1a1a1a);
+    --_g: no-repeat radial-gradient(farthest-side, #fff 90%, #1a1a1a);
     background:
         var(--_g) 0 0,
         var(--_g) 100% 0,
         var(--_g) 100% 100%,
         var(--_g) 0 100%;
-    background-size: 40% 40%;
-    animation: l38 .5s infinite;
+    background-size: 30% 30%;
+    animation: l38 .6s infinite;
 }
 
 @keyframes l38 {

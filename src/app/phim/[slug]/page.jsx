@@ -9,7 +9,6 @@ import MovieMediaSection from "@/components/MovieMediaSection/MovieMediaSection"
 export default function Page({ params, searchParams }) {
     let tap = searchParams.tap // index
     let sv = searchParams.sv // index
-    console.log(tap, sv)
     
     // ------ Fetching Data
     const [movie, setMovie] = useState(null)

@@ -17,6 +17,10 @@ const MovieSlideSection = ({ title, type, movieData, divider, topSection }) => {
     )
 }
 
+export const metadata = {
+    title: 'Trang chủ | JoyFilm',
+}
+
 export default async function Page() {
     const data = await getHomePageMovies()
 
@@ -28,19 +32,19 @@ export default async function Page() {
 
 
             {/* ------ NEW Movies Section ------ */}
-            <MovieSlideSection title='Phim mới cập nhật' type='phim-moi' movieData={data.data.newMovies} divider={true} topSection={true}/>
+            <MovieSlideSection title='Phim mới cập nhật' type='phim-moi' movieData={data.data.newMovies} divider={true} topSection={true} />
 
             {/* ------ THEATER Movies Section ------ */}
-            <MovieSlideSection title='Phim chiếu rạp' type='chieu-rap' movieData={data.data.theaterMovies} divider={true} topSection={false}/>
+            <MovieSlideSection title='Phim chiếu rạp' type='chieu-rap' movieData={data.data.theaterMovies} divider={true} topSection={false} />
 
             {/* ------ SINGLE Movies Section ------ */}
-            <MovieSlideSection title='Phim lẻ' type='phim-le' movieData={data.data.singleMovies} divider={true} topSection={false}/>
+            <MovieSlideSection title='Phim lẻ' type='phim-le' movieData={data.data.singleMovies} divider={true} topSection={false} />
 
             {/* ------ SERIES Movies Section ------ */}
-            <MovieSlideSection title='Phim bộ' type='phim-bo' movieData={data.data.seriesMovies} divider={true} topSection={false}/>
+            <MovieSlideSection title='Phim bộ' type='phim-bo' movieData={data.data.seriesMovies} divider={true} topSection={false} />
 
             {/* ------ CARTOON Movies Section ------ */}
-            <MovieSlideSection title='Hoạt hình' type='hoat-hinh' movieData={data.data.cartoonMovies} divider={false} topSection={false}/>
+            <MovieSlideSection title='Hoạt hình' type='hoat-hinh' movieData={data.data.cartoonMovies} divider={false} topSection={false} />
 
         </div>
     );

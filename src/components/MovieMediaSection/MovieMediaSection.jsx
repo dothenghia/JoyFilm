@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import BlurBox from "../BlurBox/BlurBox";
 import ReactPlayer from "react-player";
+import useTitle from '@/hooks/useTitle';
 
 const EpisodeButtons = ({ media, epIndex, svIndex }) => {
     return (
@@ -46,6 +47,8 @@ const ServerTabs = ({ media, svIndex }) => {
 const MovieMediaSection = ({ info, media, epIndex, svIndex }) => {
 
     const [player, setPlayer] = useState(true)
+
+    useTitle(`${info.name} - Tập ${media[svIndex].server_data[epIndex].name || ""} | JoyFilm`)
 
     return (
         <div className="section-container pt-16 pb-32">

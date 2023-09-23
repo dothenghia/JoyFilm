@@ -6,7 +6,9 @@ import Footer from '@/components/Footer/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-    title: 'Trang chủ | JoyFilm',
+    title: {
+        default: 'JoyFilm',
+    },
     description: 'Website xem phim trực tuyến miễn phí, chất lượng cao và không quảng cáo',
     keywords: ['phim', 'xem phim', 'phim trực tuyến', 'phim mới', 'phim lẻ', 'phim bộ', 'phim hoạt hình', 'phim anime'],
     generator: 'Next.js',

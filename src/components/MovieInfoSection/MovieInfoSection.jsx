@@ -4,6 +4,7 @@ import Link from 'next/link';
 import BlurBox from '../BlurBox/BlurBox'
 import ContentInfo from '../ContentInfo/ContentInfo';
 import TrailerPlayer from '../TrailerPlayer/TrailerPlayer';
+import useTitle from '@/hooks/useTitle';
 
 const CategoryChip = ({ categories }) => {
     return (
@@ -41,6 +42,8 @@ const RenderInformationArray = (array) => {
 }
 
 const MovieInfoSection = ({ info }) => {
+
+    useTitle(`${info.name} | JoyFilm`)
 
     return (
         <>
