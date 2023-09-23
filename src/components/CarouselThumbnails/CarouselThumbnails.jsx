@@ -10,7 +10,7 @@ const slideItems = [
         name: "Người Kiến Và Chiến Binh Ong: Thế Giới Lượng Tử",
         original_name: 'Ant-Man and the Wasp: Quantumania',
         slug: "nguoi-kien-va-chien-binh-ong-the-gioi-luong-tu",
-        poster_url: '/thumbnails/carousel1.jpg',
+        poster_url: '/thumbnails/carousel1.webp',
         thumb_url: 'https://img.ophim9.cc/uploads/movies/nguoi-kien-va-chien-binh-ong-the-gioi-luong-tu-thumb.jpg',
     },
     {
@@ -18,7 +18,7 @@ const slideItems = [
         name: "Xứ Sở Các Nguyên Tố",
         original_name: 'Elemental',
         slug: "xu-so-cac-nguyen-to",
-        poster_url: '/thumbnails/carousel2.jpg',
+        poster_url: '/thumbnails/carousel2.webp',
         thumb_url: 'https://img.ophim9.cc/uploads/movies/xu-so-cac-nguyen-to-thumb.jpg',
     },
     {
@@ -26,7 +26,7 @@ const slideItems = [
         name: "Người Nhện: Du Hành Vũ Trụ Nhện",
         original_name: 'Spider-Man: Across the Spider-Verse',
         slug: "nguoi-nhen-du-hanh-vu-tru-nhen",
-        poster_url: '/thumbnails/carousel3.jpg',
+        poster_url: '/thumbnails/carousel3.webp',
         thumb_url: 'https://img.ophim9.cc/uploads/movies/nguoi-nhen-du-hanh-vu-tru-nhen-thumb.jpg',
     },
     {
@@ -34,7 +34,7 @@ const slideItems = [
         name: "Anh Em Super Mario",
         original_name: 'The Super Mario Bros. Movie',
         slug: "anh-em-super-mario",
-        poster_url: '/thumbnails/carousel4.jpg',
+        poster_url: '/thumbnails/carousel4.webp',
         thumb_url: 'https://img.ophim9.cc/uploads/movies/anh-em-super-mario-thumb.jpg',
     }
 
