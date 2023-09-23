@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from 'react';
 import Link from 'next/link';
 import BlurBox from '../BlurBox/BlurBox'
-import ReactPlayer from 'react-player';
+import ContentInfo from '../ContentInfo/ContentInfo';
+import TrailerPlayer from '../TrailerPlayer/TrailerPlayer';
 
 const CategoryChip = ({ categories }) => {
     return (
@@ -40,9 +40,7 @@ const RenderInformationArray = (array) => {
     }
 }
 
-const MovieInfoSection = ({ info, media }) => {
-
-    const [showMore, setShowMore] = useState(false)
+const MovieInfoSection = ({ info }) => {
 
     return (
         <>
@@ -88,7 +86,7 @@ const MovieInfoSection = ({ info, media }) => {
                                     Xem Phim
                                 </Link>
                                 <button
-                                    onClick={() => { addToSaveList(info) }}
+
                                     className='add-button-color text-heading 
                                     text-sm min-[896px]:text-base min-[945px]:text-lg
                                     px-2 py-2 sm:px-3 md:px-4 md:py-2 flex items-center'>
@@ -115,7 +113,7 @@ const MovieInfoSection = ({ info, media }) => {
                                 Xem Phim
                             </Link>
                             <button
-                                onClick={() => { addToSaveList(info) }}
+
                                 className='add-button-color text-heading text-sm px-2 py-2 sm:px-3 flex items-center'>
 
                                 <>
@@ -159,10 +157,8 @@ const MovieInfoSection = ({ info, media }) => {
                 </p>
                 <p className="movie-normal-text">Quốc gia : <span className="movie-primary-text">{info.country[0]['name']}</span></p>
                 <p className="movie-normal-text">Năm sản xuất : <span className="movie-primary-text">{info.year}</span></p>
-                <div className="movie-normal-text">Nội dung :
-                    <p className={`movie-normal-text mt-1 mb-0  ${showMore ? '' : 'line-clamp-1'}`} dangerouslySetInnerHTML={{ __html: info.content }} />
-                    <button className="text-secondary underline underline-offset-2" onClick={() => { setShowMore(!showMore) }}>{showMore ? 'Ẩn bớt' : 'Xem thêm'}</button>
-                </div>
+                
+                <ContentInfo info={info} />
 
 
                 <h1 className='section-title mt-6 mb-1 min-[945px]:mb-2'>Trailer</h1>
@@ -173,15 +169,7 @@ const MovieInfoSection = ({ info, media }) => {
                             <p className="movie-normal-text">Không tìm thấy Trailer cho phim này</p>
                         ) :
                         (
-                            <div className='aspect-video mx-auto mt-5 w-full bg-black'>
-                                <ReactPlayer
-                                    width={'100%'}
-                                    height={'100%'}
-                                    url={info.trailer_url}
-                                    pip={true}
-                                    controls={true}
-                                />
-                            </div>
+                            <TrailerPlayer url={info.trailer_url} />
                         )
                 }
 
