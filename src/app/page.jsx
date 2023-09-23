@@ -22,6 +22,8 @@ export const metadata = {
 }
 
 export default async function Page() {
+    
+    // ------ Fetching Data ------
     const data = await getHomePageMovies()
 
     return (

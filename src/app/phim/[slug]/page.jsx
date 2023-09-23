@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useState, useEffect } from "react";
@@ -7,6 +8,7 @@ import MovieInfoSection from "@/components/MovieInfoSection/MovieInfoSection";
 import MovieMediaSection from "@/components/MovieMediaSection/MovieMediaSection";
 
 export default function Page({ params, searchParams }) {
+    // ------ Get Search Parameters ------
     let tap = searchParams.tap // index
     let sv = searchParams.sv // index
     

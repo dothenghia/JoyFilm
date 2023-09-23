@@ -11,6 +11,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
+
+    // ------ Fetching Data ------
     const data = await getPageMovies('single', params.page)
 
     return (

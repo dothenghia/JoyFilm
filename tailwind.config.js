@@ -20,7 +20,7 @@ module.exports = {
 
                 'heading': '#F4F4F4',
                 'subheading': '#9f9f9f',
-                'text': '#e2e8f0',
+                'text': '#ced6df',
             },
         },
     },

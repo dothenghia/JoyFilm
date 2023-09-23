@@ -1,13 +1,16 @@
+
 'use client'
 
 import { useEffect, useState, useRef } from "react";
-import searchMovies from "@/functions/searchMovies";
-import Link from "next/link";
-import MovieCard from "@/components/MovieCard/MovieCard";
 import { useRouter } from 'next/navigation'
+import Link from "next/link";
+import searchMovies from "@/functions/searchMovies";
 import useTitle from '@/hooks/useTitle';
 
+import MovieCard from "@/components/MovieCard/MovieCard";
+
 export default function Page({ searchParams }) {
+
     // ------ Get params and Set title ------
     let name = searchParams.name
 
@@ -46,6 +49,7 @@ export default function Page({ searchParams }) {
             <div className="section-container">
                 <h1 className="section-title-no-up">Tìm kiếm : "{name}"</h1>
 
+                {/* ------ Search input field ------ */}
                 <div className="relative flex mt-4">
                     <Link
                         href={`/tim-kiem?name=${searchInput}`}
@@ -66,6 +70,7 @@ export default function Page({ searchParams }) {
                     />
                 </div>
 
+                {/* ------ Movies grid ------ */}
                 {
                     (!movies) ?
                         (
@@ -73,19 +78,24 @@ export default function Page({ searchParams }) {
                                 <div className="loader"></div>
                             </div>
                         ) :
-                        (
-                            <div className="mt-6 movies-grid">
-                                {movies && movies.data.map((movie, index) => (
-                                    <MovieCard key={index} movie={movie} />
-                                ))}
-                            </div>
-                        )
+
+                        (movies.data.length == 0) ?
+                            (
+                                <div className="mt-6">
+                                    <p className="text-lg text-text">Không tìm thấy phim tương ứng</p>
+                                    <p className="text-text mt-2">Mẹo: Hãy tìm tên phim bằng tiếng anh hoặc có đầy đủ dấu</p>
+                                </div>
+                            ) : (
+                                <div className="mt-6 movies-grid">
+                                    {movies && movies.data.map((movie, index) => (
+                                        <MovieCard key={index} movie={movie} />
+                                    ))}
+                                </div>
+                            )
                 }
-
-
             </div>
 
-        </div>
+        </div >
     );
 };
 

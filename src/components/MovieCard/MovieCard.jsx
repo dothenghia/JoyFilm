@@ -13,6 +13,10 @@ const MovieCard = ({ movie }) => {
                 <div className="overflow-hidden rounded-lg lg:rounded-xl relative">
                     <div className="relative aspect-[9/13.5] group-hover:blur-sm group-hover:brightness-50
                                 scale-100 group-hover:scale-125 ease-in duration-200">
+                        <div className="w-full h-full rounded-[9px] bg-gray-700 flex justify-center items-center">
+                            <div className="skeleton"></div>
+                        </div>
+
                         <Image
                             src={movie.thumb_url}
                             alt={movie.name}
