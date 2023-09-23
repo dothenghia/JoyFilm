@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google'
 
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
+import { SaveProvider } from '@/contexts/saveContext'
+import SavedButton from '@/components/SavedButton/SavedButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,8 +28,15 @@ export default function RootLayout({ children }) {
                 {/* ------ Header Navigation Bar ------ */}
                 <Header />
 
-                {/* ------ Child route rendering ------ */}
-                {children}
+                <SaveProvider>
+                    {/* Bookmark Icon */}
+                    <div className="fixed bottom-10 left-7 xl:left-[calc((100%-1152px-100px)/2)] z-50">
+                        <SavedButton />
+                    </div>
+
+                    {/* ------ Child route rendering ------ */}
+                    {children}
+                </SaveProvider>
 
                 {/* ------ Footer ------ */}
                 <Footer />
