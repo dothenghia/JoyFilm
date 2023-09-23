@@ -4,6 +4,12 @@ import getPageMovies from "@/functions/getPageMovies";
 import MovieCard from "@/components/MovieCard/MovieCard";
 import PageButtons from "@/components/PageButtons/PageButtons";
 
+export async function generateMetadata({ params }) {
+    return {
+        title: `Phim bộ - Trang ${params.page} | JoyFilm`,
+    }
+}
+
 export default async function Page({ params }) {
     const data = await getPageMovies('series', params.page)
 

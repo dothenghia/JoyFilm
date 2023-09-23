@@ -24,7 +24,7 @@ const MovieSlide = ({ movies }) => {
     // Setting for Movies Slide
     const settings = {
         dots: false,
-        lazyLoad: true,
+        lazyLoad: false,
         arrows: false,
         infinite: true,
         draggable: true,

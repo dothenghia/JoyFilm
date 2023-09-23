@@ -1,6 +1,5 @@
 
 import Link from 'next/link'
-import Image from 'next/image'
 import Carousel3 from '../Carousel3/Carousel3'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import './CarouselThumbnails.css'
@@ -63,7 +62,7 @@ const CarouselThumbnails = () => {
                         <div key={item.id}>
 
                             {/* ------ Carousel Thumbnail Image ------ */}
-                            <img src={item.poster_url} loading='lazy' className='w-full h-full object-cover' />
+                            <img src={item.poster_url} alt={item.name} className='w-full h-full object-cover' />
 
                             {/* ------ Carousel Legend Text ------ */}
                             <div className='carousel-texts '>
