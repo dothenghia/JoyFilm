@@ -22,6 +22,36 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'img.ophim4.cc',
+                port: '',
+                pathname: '/uploads/movies/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'img.ophim5.cc',
+                port: '',
+                pathname: '/uploads/movies/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'img.ophim6.cc',
+                port: '',
+                pathname: '/uploads/movies/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'img.ophim7.cc',
+                port: '',
+                pathname: '/uploads/movies/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'img.ophim8.cc',
+                port: '',
+                pathname: '/uploads/movies/**',
+            },
+            {
+                protocol: 'https',
                 hostname: 'img.ophim9.cc',
                 port: '',
                 pathname: '/uploads/movies/**',

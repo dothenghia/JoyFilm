@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
     title: 'Giới thiệu - JoyFilm',
@@ -13,8 +14,32 @@ export default async function Page() {
                 {/* ------ Logo ------ */}
                 <div className='intro-left-section'>
                     <div className="h-full flex flex-col justify-center items-center">
-                        <img src='/logo.png' className="h-20 md:h-40" alt="Logo" />
-                        <img src='/joyfilm.png' className="h-12 mt-2 md:h-16 md:mt-4" alt="JoyFilm" />
+                        <div className="relative h-20 w-20 md:h-40 md:w-40">
+                            <Image
+                                src='/logo.png'
+                                alt="Logo"
+                                fill
+                                sizes="(max-width: 768px) 80px, 160px"
+                                style={{
+                                    objectFit: 'contain',
+                                }}
+                                priority
+                                quality={100}
+                            />
+                        </div>
+                        <div className="relative h-12 w-full mt-2 md:h-16 md:mt-4">
+                            <Image
+                                src='/joyfilm.png'
+                                alt="JoyFilm"
+                                fill
+                                sizes="80vw"
+                                style={{
+                                    objectFit: 'contain',
+                                }}
+                                priority
+                                quality={100}
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -35,15 +60,45 @@ export default async function Page() {
             <div className="section-container mt-3 flex flex-col md:flex-row">
                 {/* ------ Logo ------ */}
                 <div className='intro-left-section px-5 md:px-0 flex flex-col justify-center'>
-                    <img
-                        src='/sc1.webp'
-                        className='w-2/3 min-[500px]:w-1/2 md:w-[80%] rounded-xl border' alt="Screenshot (133)" />
-                    <img
-                        src='/sc2.webp'
-                        className='w-2/3 min-[500px]:w-1/2 -mt-[24%] md:w-[80%] md:-mt-[20%] rounded-xl border self-center' alt="Screenshot (134)" />
-                    <img
-                        src='/sc3.webp'
-                        className='w-2/3 min-[500px]:w-1/2 -mt-[24%] md:w-[80%] md:-mt-[20%] rounded-xl border self-end' alt="Screenshot (135)" />
+                    <div className="relative aspect-video w-2/3 min-[500px]:w-1/2 md:w-[80%] rounded-xl border overflow-hidden">
+                        <Image
+                            src='/sc1.webp'
+                            alt="Home Page"
+                            fill
+                            sizes="90vw"
+                            style={{
+                                objectFit: 'cover',
+                            }}
+                            priority
+                            quality={100}
+                        />
+                    </div>
+                    <div className="relative aspect-video w-2/3 min-[500px]:w-1/2 -mt-[24%] md:w-[80%] md:-mt-[20%] rounded-xl border self-center overflow-hidden">
+                        <Image
+                            src='/sc2.webp'
+                            alt="Information Page"
+                            fill
+                            sizes="90vw"
+                            style={{
+                                objectFit: 'cover',
+                            }}
+                            priority
+                            quality={100}
+                        />
+                    </div>
+                    <div className="relative aspect-video w-2/3 min-[500px]:w-1/2 -mt-[24%] md:w-[80%] md:-mt-[20%] rounded-xl border self-end overflow-hidden">
+                        <Image
+                            src='/sc3.webp'
+                            alt="Media Page"
+                            fill
+                            sizes="90vw"
+                            style={{
+                                objectFit: 'cover',
+                            }}
+                            priority
+                            quality={100}
+                        />
+                    </div>
                 </div>
 
                 {/* ------ Intro ------ */}

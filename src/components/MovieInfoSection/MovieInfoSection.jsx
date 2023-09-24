@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import { useContext } from 'react';
 import { saveContext } from '@/contexts/saveContext';
 import Link from 'next/link';
@@ -59,19 +60,58 @@ const MovieInfoSection = ({ info }) => {
             {/* ------ Thumbnail & Brief Information ------ */}
             <div className="w-full overflow-hidden md:overflow-visible max-h-[500px] md:max-h-none md:aspect-[16/7] relative">
                 {/* ------ Poster Background ------ */}
-                <div className="aspect-[7/11] md:aspect-[16/7]">
-                    <img src={info.poster_url} loading='eager' className='hidden md:block w-full h-full object-cover brightness-[25%]' />
-                    <img src={info.thumb_url} loading='eager' className='md:hidden w-full h-full object-cover blur-sm brightness-[50%] -translate-y-[1/5]' />
+                <div className="relative aspect-[7/11] w-full md:aspect-[16/8]">
+                    <Image
+                        src={info.poster_url}
+                        alt='Poster Background'
+                        quality={100}
+                        priority
+                        fill
+                        sizes="(min-width: 768px) 100vw, 100vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        className='hidden md:block brightness-[25%]'
+                    />
+                    <Image
+                        src={info.thumb_url}
+                        alt='Thumbnail Background'
+                        quality={1}
+                        priority
+                        fill
+                        sizes="(min-width: 768px) 10vw, 10vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        className='md:hidden blur-[6px] brightness-[50%] -translate-y-[1/5]'
+                    />
                 </div>
 
                 {/* ------ Information Container ------ */}
                 <div className="absolute z-10 top-0 left-0 h-full w-full">
                     <div className="h-full section-container-no-py flex flex-col md:flex-row justify-center items-center">
                         {/* ------ Image Thumnail ------ */}
-                        <div className="h-[90%] md:h-full aspect-[9/16]
+                        <div className="h-[90%] md:h-full
                                     pb-4 md:pb-0 lg:pb-10 xl:pb-20 pt-16 md:pt-[74px] lg:pt-20
                                     flex justify-center md:justify-end">
-                            <img src={info.thumb_url} loading='eager' className='h-full rounded-2xl object-cover' />
+                            <div className='h-full relative aspect-[10/16]'>
+                                <div className='w-full h-full flex justify-center items-center'>
+                                    <div className="loader"></div>
+                                </div>
+
+                                <Image
+                                    src={info.thumb_url}
+                                    alt='Thumbnail'
+                                    quality={80}
+                                    priority
+                                    fill
+                                    sizes="(min-width: 768px) 100vw, 100vw"
+                                    style={{
+                                        objectFit: 'cover',
+                                    }}
+                                    className='rounded-2xl'
+                                />
+                            </div>
                         </div>
 
                         {/* ------ Brief Information for Medium & Large screen------ */}

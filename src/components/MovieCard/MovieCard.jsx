@@ -21,10 +21,12 @@ const MovieCard = ({ movie }) => {
                             src={movie.thumb_url}
                             alt={movie.name}
                             fill={true}
+                            sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 896px) 25vw, (max-width: 1024px) 20vw, 17vw"
+                            style={{
+                                objectFit: 'cover',
+                            }}
                             loading="lazy"
-                            sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 33vw"
                             quality={40}
-                            className="object-cover"
                         />
 
                     </div>

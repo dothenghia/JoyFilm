@@ -13,6 +13,7 @@ const slideItems = [
         slug: "nguoi-kien-va-chien-binh-ong-the-gioi-luong-tu",
         poster_url: '/thumbnails/carousel1.webp',
         thumb_url: 'https://img.ophim9.cc/uploads/movies/nguoi-kien-va-chien-binh-ong-the-gioi-luong-tu-thumb.jpg',
+        lazy: 'eager',
     },
     {
         id: 3,
@@ -21,6 +22,7 @@ const slideItems = [
         slug: "xu-so-cac-nguyen-to",
         poster_url: '/thumbnails/carousel2.webp',
         thumb_url: 'https://img.ophim9.cc/uploads/movies/xu-so-cac-nguyen-to-thumb.jpg',
+        lazy: 'lazy',
     },
     {
         id: 4,
@@ -29,6 +31,7 @@ const slideItems = [
         slug: "nguoi-nhen-du-hanh-vu-tru-nhen",
         poster_url: '/thumbnails/carousel3.webp',
         thumb_url: 'https://img.ophim9.cc/uploads/movies/nguoi-nhen-du-hanh-vu-tru-nhen-thumb.jpg',
+        lazy: 'lazy',
     },
     {
         id: 6,
@@ -37,6 +40,7 @@ const slideItems = [
         slug: "anh-em-super-mario",
         poster_url: '/thumbnails/carousel4.webp',
         thumb_url: 'https://img.ophim9.cc/uploads/movies/anh-em-super-mario-thumb.jpg',
+        lazy: 'lazy',
     }
 
 ]
@@ -63,7 +67,7 @@ const CarouselThumbnails = () => {
                         <div key={item.id}>
 
                             {/* ------ Carousel Thumbnail Image ------ */}
-                            <img src={item.poster_url} alt={item.name} className='w-full h-full object-cover' />
+                            <img src={item.poster_url} alt={item.name} loading={item.lazy} className='w-full h-full object-cover' />
 
                             {/* ------ Carousel Legend Text ------ */}
                             <div className='carousel-texts '>
