@@ -14,7 +14,7 @@ export const metadata = {
         default: 'JoyFilm',
     },
     description: 'Website xem phim trực tuyến miễn phí, chất lượng cao và không quảng cáo',
-    keywords: ['phim', 'xem phim', 'phim trực tuyến', 'phim mới', 'phim lẻ', 'phim bộ', 'phim hoạt hình', 'phim anime'],
+    keywords: ['phim', 'joyfilm', 'myjoyfilm', 'xem phim', 'phim trực tuyến', 'phim mới', 'phim lẻ', 'phim bộ', 'phim hoạt hình', 'phim anime'],
     generator: 'Next.js',
     applicationName: 'JoyFilm',
     authors: [{ name: 'The Nghia' }, { name: 'The Nghia', url: 'https://github.com/dothenghia' }],
