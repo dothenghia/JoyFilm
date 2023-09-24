@@ -8,7 +8,7 @@ import MovieSlide from "@/components/MovieSlide/MovieSlide"
 const MovieSlideSection = ({ title, type, movieData, divider, topSection }) => {
     return (
         <div className={`section-container ${topSection && 'mt-3 md:-mt-6 lg:-mt-8'}`}>
-            <Link href={`/${type}/1`} className="section-title-link">{title}</Link>
+            <Link aria-label={title} href={`/${type}/1`} className="section-title-link">{title}</Link>
             <MovieSlide movies={movieData} />
             {
                 divider && <div className="section-divider"></div>

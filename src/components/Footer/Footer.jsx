@@ -11,7 +11,7 @@ const Footer = () => {
                 </Link>
                 <div className='flex w-full justify-evenly sm:w-auto items-center'>
                     <Link href='/gioi-thieu' className='footer-link'>Giới thiệu</Link>
-                    <Link href='https://github.com/dothenghia/JoyFilm-Web' target='_blank' className='footer-link'>Github</Link>
+                    <Link href='https://github.com/dothenghia/JoyFilm' target='_blank' className='footer-link'>Github</Link>
                     <Link href='https://github.com/dothenghia/JoyFilm-Server' target='_blank' className='footer-link'>API</Link>
                     <Link href='/gioi-thieu' className='footer-link'>Liên hệ</Link>
                 </div>

@@ -74,11 +74,11 @@ const MovieSlide = ({ movies }) => {
 
             {/* ------ Slide Control Buttons ------ */}
             <div className="absolute right-2 -top-10 flex items-center justify-end">
-                <button className="group" onClick={prevMovie}>
+                <button className="group" aria-label="Previous" onClick={prevMovie}>
                     <svg className='w-5 h-5 sm:w-6 sm:h-6 text-heading group-hover:text-secondary rotate-180 mr-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"> <polygon points="5 3 19 12 5 21 5 3"></polygon> </svg>
                 </button>
 
-                <button className="group" onClick={nextMovie}>
+                <button className="group" aria-label="Next" onClick={nextMovie}>
                     <svg className='w-5 h-5 sm:w-6 sm:h-6 text-heading group-hover:text-secondary ml-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"> <polygon points="5 3 19 12 5 21 5 3"></polygon> </svg>
                 </button>
             </div>

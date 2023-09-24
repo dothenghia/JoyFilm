@@ -97,6 +97,7 @@ const MovieInfoSection = ({ info }) => {
                                     Xem Phim
                                 </Link>
                                 <button
+                                    aria-label="Lưu phim"
                                     onClick={() => { addToSaveList(info) }}
                                     className='add-button-color text-heading 
                                     text-sm min-[896px]:text-base min-[945px]:text-lg
@@ -136,6 +137,7 @@ const MovieInfoSection = ({ info }) => {
                                 Xem Phim
                             </Link>
                             <button
+                                aria-label="Lưu phim"
                                 onClick={() => { addToSaveList(info) }}
                                 className='add-button-color text-heading text-sm px-2 py-2 sm:px-3 flex items-center'>
                                 {

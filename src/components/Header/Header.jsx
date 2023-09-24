@@ -26,7 +26,7 @@ const Header = () => {
                         <div className="flex">
 
                             {/* ------ Logo ------ */}
-                            <Link href="/" className="flex items-center py-3">
+                            <Link href="/" aria-label="Tìm kiếm" className="flex items-center py-3">
                                 <Image
                                     src='/logo.png'
                                     alt="Logo"
@@ -46,11 +46,11 @@ const Header = () => {
 
                             {/* ------ Navigation Links ------ */}
                             <div className="hidden lg:flex flex-row">
-                                <Link href="/phim-moi/1" className="header-link">Phim mới</Link>
-                                <Link href="/chieu-rap/1" className="header-link">Phim chiếu rạp</Link>
-                                <Link href="/phim-le/1" className="header-link">Phim lẻ</Link>
-                                <Link href="/phim-bo/1" className="header-link">Phim bộ</Link>
-                                <Link href="/hoat-hinh/1" className="header-link">Hoạt hình</Link>
+                                <Link aria-label="Phim mới" href="/phim-moi/1" className="header-link">Phim mới</Link>
+                                <Link aria-label="Phim chiếu rạp" href="/chieu-rap/1" className="header-link">Phim chiếu rạp</Link>
+                                <Link aria-label="Phim lẻ" href="/phim-le/1" className="header-link">Phim lẻ</Link>
+                                <Link aria-label="Phim bộ" href="/phim-bo/1" className="header-link">Phim bộ</Link>
+                                <Link aria-label="Hoạt hình" href="/hoat-hinh/1" className="header-link">Hoạt hình</Link>
                             </div>
 
                         </div>
@@ -61,7 +61,7 @@ const Header = () => {
 
                             {/* ------ Seach Input ------ */}
                             <div className="relative hidden lg:flex">
-                                <Link
+                                <Link aria-label="Tìm kiếm"
                                     href={`/tim-kiem?name=${searchInput}`}
                                     className="absolute inset-y-0 right-0 flex items-center px-3">
                                     <svg className="w-4 h-4 text-text" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -82,6 +82,7 @@ const Header = () => {
                             {/* ------ Hamburger Button ------ */}
                             <button data-collapse-toggle="navbar-search" type="button"
                                 aria-controls="navbar-search" aria-expanded="false"
+                                aria-label="Mở menu"
                                 onClick={toggleNavbar}
                                 className="inline-flex rounded-lg lg:hidden items-center p-2 w-10 h-10 justify-center
                                 text-sm text-heading border-[2px] hover:bg-gradient-to-br from-cyan-500 to-indigo-500" >
@@ -108,7 +109,7 @@ const Header = () => {
                                     autoComplete="true"
                                     ref={searchInputDOM}
                                 />
-                                <Link
+                                <Link aria-label="Tìm kiếm"
                                     href={`/tim-kiem?name=${searchInput}`}
                                     onClick={toggleNavbar}
                                     className="flex items-center px-3">
@@ -120,11 +121,11 @@ const Header = () => {
 
                             {/* ------ Navigation Links ------ */}
                             <div className="font-medium flex flex-col lg:pl-0 mt-4 mb-2 lg:mb-0 lg:flex-row lg:space-x-0 lg:mt-0">
-                                <Link href="/phim-moi/1" onClick={toggleNavbar} className="header-link">Phim mới</Link>
-                                <Link href="/chieu-rap/1" onClick={toggleNavbar} className="header-link">Phim chiếu rạp</Link>
-                                <Link href="/phim-le/1" onClick={toggleNavbar} className="header-link">Phim lẻ</Link>
-                                <Link href="/phim-bo/1" onClick={toggleNavbar} className="header-link">Phim bộ</Link>
-                                <Link href="/hoat-hinh/1" onClick={toggleNavbar} className="header-link">Hoạt hình</Link>
+                                <Link aria-label="Phim mới" href="/phim-moi/1" onClick={toggleNavbar} className="header-link">Phim mới</Link>
+                                <Link aria-label="Phim chiếu rạp" href="/chieu-rap/1" onClick={toggleNavbar} className="header-link">Phim chiếu rạp</Link>
+                                <Link aria-label="Phim lẻ" href="/phim-le/1" onClick={toggleNavbar} className="header-link">Phim lẻ</Link>
+                                <Link aria-label="Phim bộ" href="/phim-bo/1" onClick={toggleNavbar} className="header-link">Phim bộ</Link>
+                                <Link aria-label="Hoạt hình" href="/hoat-hinh/1" onClick={toggleNavbar} className="header-link">Hoạt hình</Link>
                             </div>
                         </div>
 

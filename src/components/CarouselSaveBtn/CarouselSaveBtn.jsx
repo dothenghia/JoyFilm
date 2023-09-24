@@ -13,6 +13,7 @@ const CarouselSaveBtn = ({ item }) => {
 
     return (
         <button
+            aria-label="Lưu phim"
             onClick={() => { addToSaveList(item) }}
             className='add-button-color text-heading
                         text-sm min-[896px]:text-base min-[945px]:text-lg

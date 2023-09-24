@@ -21,9 +21,8 @@ const MovieCard = ({ movie }) => {
                             src={movie.thumb_url}
                             alt={movie.name}
                             fill={true}
-                            // priority={true}
                             loading="lazy"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 33vw"
                             quality={40}
                             className="object-cover"
                         />

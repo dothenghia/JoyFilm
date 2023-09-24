@@ -9,7 +9,7 @@ const ContentInfo = ({ info }) => {
     return (
         <div className="movie-normal-text">Nội dung :
             <p className={`movie-normal-text mt-1 mb-0  ${showMore ? '' : 'line-clamp-1'}`} dangerouslySetInnerHTML={{ __html: info.content }} />
-            <button className="text-secondary underline underline-offset-2" onClick={() => { setShowMore(!showMore) }}>{showMore ? 'Ẩn bớt' : 'Xem thêm'}</button>
+            <button aria-label="Xem thêm" className="text-secondary underline underline-offset-2" onClick={() => { setShowMore(!showMore) }}>{showMore ? 'Ẩn bớt' : 'Xem thêm'}</button>
         </div>
     );
 };
