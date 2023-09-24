@@ -46,19 +46,19 @@
 - Trang chủ
 
 <div align="center">
-  <img src="https://github.com/dothenghia/JoyFilm/assets/63101932/f5845f5c-f241-49e9-ba74-32cbb87b65f8" alt="Home" width="80%">
+  <img src="https://github.com/dothenghia/JoyFilm/assets/63101932/d949e899-fa50-4c74-96e7-9216e1c5dea8" alt="Home" width="80%">
 </div>
-    
+
 - Trang Giới thiệu
 
 <div align="center">
-  <img src="https://github.com/dothenghia/JoyFilm/assets/63101932/567495e6-3fbc-4599-8f92-6b19874f1b4f" alt="Info" width="80%">
+  <img src="https://github.com/dothenghia/JoyFilm/assets/63101932/92653139-9408-4140-a11b-3c47b548be1c" alt="Info" width="80%">
 </div>
 
 - Trang phim
 
 <div align="center">
-  <img src="https://github.com/dothenghia/JoyFilm/assets/63101932/692737cb-7573-4eb6-8d97-785da5f4418b" alt="Movie" width="80%">
+  <img src="https://github.com/dothenghia/JoyFilm/assets/63101932/ba339abd-8fd8-479c-9adf-a16a6ab3faa3" alt="Movie" width="80%">
 </div>
 
 ## 4. Thông tin liên hệ
