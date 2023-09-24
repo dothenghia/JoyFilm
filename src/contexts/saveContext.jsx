@@ -1,15 +1,17 @@
 'use client'
 
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 
 const saveContext = createContext()
 
 function SaveProvider({ children }) {
 
-    const [saveList, setSaveList] = useState(() => {
+    const [saveList, setSaveList] = useState([])
+
+    useEffect(() => {
         let localSaveList = JSON.parse(localStorage.getItem('saveList'))
-        return localSaveList || [];
-    })
+        setSaveList(localSaveList || [])
+    }, [])
 
     const isSaved = (movie) => {
         const exists = saveList.some((savedMovie) => savedMovie.name === movie.name);
