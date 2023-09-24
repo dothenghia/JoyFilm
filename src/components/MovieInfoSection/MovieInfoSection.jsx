@@ -1,5 +1,7 @@
 'use client'
 
+import { useContext } from 'react';
+import { saveContext } from '@/contexts/saveContext';
 import Link from 'next/link';
 import BlurBox from '../BlurBox/BlurBox'
 import ContentInfo from '../ContentInfo/ContentInfo';
@@ -45,6 +47,12 @@ const MovieInfoSection = ({ info }) => {
 
     useTitle(`${info.name} | JoyFilm`)
 
+    const context = useContext(saveContext)
+
+    const addToSaveList = (movie) => {
+        context.toggleSaveMovie(movie)
+    }
+
     return (
         <>
 
@@ -89,17 +97,29 @@ const MovieInfoSection = ({ info }) => {
                                     Xem Phim
                                 </Link>
                                 <button
-
+                                    onClick={() => { addToSaveList(info) }}
                                     className='add-button-color text-heading 
                                     text-sm min-[896px]:text-base min-[945px]:text-lg
                                     px-2 py-2 sm:px-3 md:px-4 md:py-2 flex items-center'>
 
-                                    <>
-                                        <div className='h-full flex items-center'>
-                                            <img src='/bookmark.svg' className="min-[960px]:-mt-px lg:mt-0 mr-1 w-[18px] h-[18px]" alt="Bookmark" />
-                                        </div>
-                                        Lưu vào Danh sách
-                                    </>
+                                    {
+                                        (context.isSaved(info) ? (
+                                            <>
+                                                <div className='h-full flex items-center'>
+                                                    <img src='/bookmark-fill.svg' className="min-[960px]:-mt-px lg:mt-0 mr-1 w-[18px] h-[18px]" alt="Bookmark" />
+                                                </div>
+                                                Đã lưu
+                                            </>
+                                        ) : (
+                                            <>
+                                                <div className='h-full flex items-center'>
+                                                    <img src='/bookmark.svg' className="min-[960px]:-mt-px lg:mt-0 mr-1 w-[18px] h-[18px]" alt="Bookmark" />
+                                                </div>
+                                                Lưu vào Danh sách
+                                            </>
+                                        ))
+                                    }
+
 
                                 </button>
                             </div>
@@ -116,16 +136,25 @@ const MovieInfoSection = ({ info }) => {
                                 Xem Phim
                             </Link>
                             <button
-
+                                onClick={() => { addToSaveList(info) }}
                                 className='add-button-color text-heading text-sm px-2 py-2 sm:px-3 flex items-center'>
-
-                                <>
-                                    <div className='h-full flex items-center'>
-                                        <img src='/bookmark.svg' className=" mr-1 w-[18px] h-[18px]" alt="Bookmark" />
-                                    </div>
-                                    Lưu vào Danh sách
-                                </>
-
+                                {
+                                    (context.isSaved(info) ? (
+                                        <>
+                                            <div className='h-full flex items-center'>
+                                                <img src='/bookmark-fill.svg' className=" mr-1 w-[18px] h-[18px]" alt="Bookmark" />
+                                            </div>
+                                            Đã lưu
+                                        </>
+                                    ) : (
+                                        <>
+                                            <div className='h-full flex items-center'>
+                                                <img src='/bookmark.svg' className=" mr-1 w-[18px] h-[18px]" alt="Bookmark" />
+                                            </div>
+                                            Lưu vào Danh sách
+                                        </>
+                                    ))
+                                }
                             </button>
                         </div>
 
@@ -160,7 +189,7 @@ const MovieInfoSection = ({ info }) => {
                 </p>
                 <p className="movie-normal-text">Quốc gia : <span className="movie-primary-text">{info.country[0]['name']}</span></p>
                 <p className="movie-normal-text">Năm sản xuất : <span className="movie-primary-text">{info.year}</span></p>
-                
+
                 <ContentInfo info={info} />
 
 

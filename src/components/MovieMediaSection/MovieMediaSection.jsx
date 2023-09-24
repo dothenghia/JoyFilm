@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { saveContext } from '@/contexts/saveContext';
 import Link from 'next/link';
 import BlurBox from "../BlurBox/BlurBox";
 import ReactPlayer from "react-player";
@@ -47,6 +48,12 @@ const ServerTabs = ({ media, svIndex }) => {
 const MovieMediaSection = ({ info, media, epIndex, svIndex }) => {
 
     const [player, setPlayer] = useState(true)
+
+    const context = useContext(saveContext)
+
+    const addToSaveList = (movie) => {
+        context.toggleSaveMovie(movie)
+    }
 
     useTitle(`${info.name} - Tập ${media[svIndex].server_data[epIndex].name || ""} | JoyFilm`)
 
@@ -123,14 +130,23 @@ const MovieMediaSection = ({ info, media, epIndex, svIndex }) => {
                 <button className="feature-btn"
                     onClick={() => { addToSaveList(info) }}
                 >
-
-                    <>
-                        <div className='h-full flex items-center'>
-                            <img src='/bookmark.svg' className="w-[14px] h-[14px] mr-1" alt="Bookmark" />
-                        </div>
-                        Lưu phim
-                    </>
-
+                    {
+                        (context.isSaved(info) ? (
+                            <>
+                                <div className='h-full flex items-center'>
+                                    <img src='/bookmark-fill.svg' className="w-[14px] h-[14px] mr-1" alt="Bookmark" />
+                                </div>
+                                Đã lưu
+                            </>
+                        ) : (
+                            <>
+                                <div className='h-full flex items-center'>
+                                    <img src='/bookmark.svg' className="w-[14px] h-[14px] mr-1" alt="Bookmark" />
+                                </div>
+                                Lưu phim
+                            </>
+                        ))
+                    }
                 </button>
             </div>
 

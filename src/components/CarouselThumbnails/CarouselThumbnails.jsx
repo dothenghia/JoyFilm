@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Carousel3 from '../Carousel3/Carousel3'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import './CarouselThumbnails.css'
+import CarouselSaveBtn from '../CarouselSaveBtn/CarouselSaveBtn'
 
 const slideItems = [
     {
@@ -82,16 +83,7 @@ const CarouselThumbnails = () => {
                                         Xem Phim
                                     </Link>
 
-                                    <button
-                                        className='add-button-color text-heading
-                                                    text-sm min-[896px]:text-base min-[945px]:text-lg
-                                                    px-2 py-2 sm:px-3 md:px-4 md:py-3 flex items-center'>
-
-                                        <div className='h-full flex items-center'>
-                                            <img src='/bookmark.svg' className="md:mt-[2px] lg:mt-1 mr-1 w-[18px] h-[18px]" alt="Bookmark" />
-                                        </div>
-                                        Lưu vào Danh sách
-                                    </button>
+                                    <CarouselSaveBtn item={item}/>
                                 </div>
                             </div>
                         </div>
