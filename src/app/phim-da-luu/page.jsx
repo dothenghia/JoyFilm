@@ -17,6 +17,7 @@ export default function Page() {
             <div className="section-container">
                 <h1 className="section-title-no-up">Phim đã lưu ({context.saveList.length})</h1>
 
+                {/* ------ Movies Grid ------ */}
                 <div className="mt-6 movies-grid">
                     {context.saveList.map((movie, index) => (
                         <MovieCard key={index} movie={movie} />

@@ -18,7 +18,7 @@ const Header = () => {
         <>
 
             {/* ------ Header Navigation bar ------ */}
-            <nav className="bg-transparent fixed w-full z-20 top-0 left-0 shadow-[inset_0px_14px_20px_-10px_rgba(0,0,0,0.7)]" >
+            <nav className="bg-black/40 md:bg-transparent fixed w-full z-20 top-0 left-0 shadow-[inset_0px_14px_20px_-10px_rgba(0,0,0,0.7)]" >
                 <BlurBox>
                     <div className="section-container-no-py flex flex-wrap items-center justify-between">
 
