@@ -52,7 +52,7 @@
 
     /* [Footer] Link Button */
     .footer-link {
-        @apply sm:ml-12 text-sm text-subheading hover:text-slate-200 hover:underline underline-offset-2;
+        @apply py-2 sm:py-0 sm:ml-12 text-base sm:text-sm text-subheading hover:text-slate-200 hover:underline underline-offset-2;
     }
     .intro-title {
         @apply mt-4 md:mt-0 text-heading text-justify text-xl md:text-2xl font-semibold;
@@ -119,7 +119,7 @@
 
     /* [Page] Section Divider */
     .section-divider {
-        @apply mt-6 border-b-2 border-divider;
+        @apply mt-10 border-b-2 border-divider;
     }
 
 

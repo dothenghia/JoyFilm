@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className='bg-stone-950 pt-6 pb-10 sm:py-8'>
             <div className='section-container-no-py flex flex-col-reverse sm:flex-row items-center justify-between'>
-                <Link href="/" className="flex items-center mt-8 sm:mt-0">
+                <Link href="/" className="flex items-center mt-4 sm:mt-0">
                     <Image src='/logo.png'
                         alt="Logo"
                         width={44}
@@ -23,7 +23,7 @@ const Footer = () => {
                         loading="lazy"
                     />
                 </Link>
-                <div className='flex w-full justify-evenly sm:w-auto items-center'>
+                <div className='flex flex-col sm:flex-row w-full justify-evenly sm:w-auto items-center'>
                     <Link href='/gioi-thieu' className='footer-link'>Giới thiệu</Link>
                     <Link href='https://github.com/dothenghia/JoyFilm' target='_blank' className='footer-link'>Github</Link>
                     <Link href='https://github.com/dothenghia/JoyFilm-Server' target='_blank' className='footer-link'>API</Link>

@@ -156,7 +156,7 @@ export default async function Page() {
                         Và tôi là Thế Nghĩa - admin của JoyFilm.
                     </p>
                     <p className='intro-paragraph'>
-                        Bạn có thể liên hệ với tôi qua các kênh sau :
+                        Bạn có thể liên hệ với tôi qua các kênh sau:
                     </p>
                     <li className='intro-paragraph'>
                         Facebook : <Link className='text-blue-500 underline underline-offset-4'
