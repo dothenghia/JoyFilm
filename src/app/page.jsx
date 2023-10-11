@@ -22,7 +22,7 @@ export const metadata = {
 }
 
 export default async function Page() {
-    
+
     // ------ Fetching Data ------
     const data = await getHomePageMovies()
 
@@ -32,21 +32,28 @@ export default async function Page() {
             {/* ------ Carousel of 4 Top Movies ------ */}
             <CarouselThumbnails />
 
+            <div>
+                <div>
+                    {/* ------ NEW Movies Section ------ */}
+                    <MovieSlideSection title='Phim mới cập nhật' type='phim-moi' movieData={data.data.newMovies} divider={true} topSection={true} />
 
-            {/* ------ NEW Movies Section ------ */}
-            <MovieSlideSection title='Phim mới cập nhật' type='phim-moi' movieData={data.data.newMovies} divider={true} topSection={true} />
+                    {/* ------ THEATER Movies Section ------ */}
+                    <MovieSlideSection title='Phim chiếu rạp' type='chieu-rap' movieData={data.data.theaterMovies} divider={true} topSection={false} />
 
-            {/* ------ THEATER Movies Section ------ */}
-            <MovieSlideSection title='Phim chiếu rạp' type='chieu-rap' movieData={data.data.theaterMovies} divider={true} topSection={false} />
+                    {/* ------ SINGLE Movies Section ------ */}
+                    <MovieSlideSection title='Phim lẻ' type='phim-le' movieData={data.data.singleMovies} divider={true} topSection={false} />
 
-            {/* ------ SINGLE Movies Section ------ */}
-            <MovieSlideSection title='Phim lẻ' type='phim-le' movieData={data.data.singleMovies} divider={true} topSection={false} />
+                    {/* ------ SERIES Movies Section ------ */}
+                    <MovieSlideSection title='Phim bộ' type='phim-bo' movieData={data.data.seriesMovies} divider={true} topSection={false} />
 
-            {/* ------ SERIES Movies Section ------ */}
-            <MovieSlideSection title='Phim bộ' type='phim-bo' movieData={data.data.seriesMovies} divider={true} topSection={false} />
+                    {/* ------ CARTOON Movies Section ------ */}
+                    <MovieSlideSection title='Hoạt hình' type='hoat-hinh' movieData={data.data.cartoonMovies} divider={false} topSection={false} />
+                </div>
 
-            {/* ------ CARTOON Movies Section ------ */}
-            <MovieSlideSection title='Hoạt hình' type='hoat-hinh' movieData={data.data.cartoonMovies} divider={false} topSection={false} />
+                <div>
+                    
+                </div>
+            </div>
 
         </div>
     );
