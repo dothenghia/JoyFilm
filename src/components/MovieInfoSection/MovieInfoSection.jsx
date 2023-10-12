@@ -64,8 +64,9 @@ const MovieInfoSection = ({ info }) => {
                     <Image
                         src={info.poster_url}
                         alt='Poster Background'
-                        quality={100}
+                        quality={60}
                         priority
+                        unoptimized
                         fill
                         sizes="(min-width: 768px) 100vw, 100vw"
                         style={{
@@ -78,6 +79,7 @@ const MovieInfoSection = ({ info }) => {
                         alt='Thumbnail Background'
                         quality={1}
                         priority
+                        unoptimized
                         fill
                         sizes="(min-width: 768px) 10vw, 10vw"
                         style={{
@@ -102,8 +104,9 @@ const MovieInfoSection = ({ info }) => {
                                 <Image
                                     src={info.thumb_url}
                                     alt='Thumbnail'
-                                    quality={80}
+                                    quality={50}
                                     priority
+                                    unoptimized
                                     fill
                                     sizes="(min-width: 768px) 100vw, 100vw"
                                     style={{
