@@ -28,18 +28,25 @@
 .skeleton {
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, #a1a1a1 25%, #e0e0e0 50%, #a1a1a1 75%);
-    background-size: 200% 100%;
-    animation: skeletonloading linear 1.5s infinite;
+    /* background: linear-gradient(90deg, #a1a1a1 25%, #e0e0e0 50%, #a1a1a1 75%); */
+    /* background-size: 200% 100%; */
+    animation: skeletonloading linear 2s infinite;
 }
 
 @keyframes skeletonloading {
     0% {
-        background-position: 100% 0;
+        /* background-position: 100% 0; */
+        background-color: #a1a1a1;
+    }
+
+    50% {
+        /* background-position: -100% 0; */
+        background-color: #efefef;
     }
 
     100% {
-        background-position: -100% 0;
+        /* background-position: -100% 0; */
+        background-color: #a1a1a1;
     }
 }
 
@@ -54,6 +61,7 @@
     .footer-link {
         @apply py-2 sm:py-0 sm:ml-12 text-base sm:text-sm text-subheading hover:text-slate-200 hover:underline underline-offset-2;
     }
+
     .intro-title {
         @apply mt-4 md:mt-0 text-heading text-justify text-xl md:text-2xl font-semibold;
     }
@@ -67,7 +75,7 @@
     }
 
     .intro-right-section {
-        @apply  md:mx-5 md:basis-3/5 lg:basis-2/3;
+        @apply md:mx-5 md:basis-3/5 lg:basis-2/3;
     }
 
     /* [Movie] Movie Grid */
